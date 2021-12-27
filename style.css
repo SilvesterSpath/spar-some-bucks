@@ -114,6 +114,38 @@ section a {
   margin: 0 5px;
 }
 
+/* Footer & Socilal */
+.footer-container {
+  font-family: 'Courier Prime', monospace;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.social img {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px auto;
+}
+
 /* Box */
 .box {
   margin-bottom: 30px;
@@ -128,7 +160,20 @@ section a {
   max-width: 500px;
   text-align: center;
   justify-self: center;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-f .text-md {
+  font-family: 'Courier Prime', monospace;
+}
+
+.box-f .box-text {
+  max-width: 550px;
 }
 
 /* Grid styles */
@@ -163,7 +208,8 @@ section a {
   color: black;
 }
 
-.btn-dark-outline:hover {
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -237,6 +283,18 @@ section a {
 .py-lg {
   padding: 40px 0;
 }
+
+/* under 768px */
+@media (max-width: 768px) {
+  .grid-col-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-reversed :first-child {
+    order: 0;
+  }
+}
+
 /* under 960px */
 @media (max-width: 960px) {
   .text-xl {
@@ -255,5 +313,8 @@ section a {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .divider {
+    max-width: calc(1440px * 0.9);
   }
 }
